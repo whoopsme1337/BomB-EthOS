@@ -27,13 +27,21 @@ canvas {
 }
 #muteBtn {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  bottom: 20px;
+  left: 20px;
   font-size: 18px;
-  padding: 5px 10px;
-  background: #1e293b;
+  padding: 4px 8px;
+  background: rgba(30, 41, 59, 0.8);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
+  z-index: 999;
+  opacity: 0.6;
+  transition: all 0.2s ease;
+}
+
+#muteBtn:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
