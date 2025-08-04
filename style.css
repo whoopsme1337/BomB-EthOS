@@ -1,0 +1,33 @@
+body {
+  background: linear-gradient(to bottom right, #c084fc, #60a5fa);
+  color: #fff;
+  font-family: monospace;
+  text-align: center;
+  padding: 20px;
+}
+canvas {
+  border: 2px solid #333;
+  background: #1e293b;
+  touch-action: none;
+}
+#score {
+  font-size: 18px;
+  margin-top: 10px;
+}
+#message {
+  font-size: 16px;
+  margin-top: 5px;
+  color: #f87171;
+}
+#muteBtn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  font-size: 18px;
+  padding: 5px 10px;
+  background: #1e293b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
