@@ -12,6 +12,26 @@ let items = [];
 let score = 0;
 let gameOver = false;
 
+function resizeCanvas() {
+  const aspectRatio = 16 / 9;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+
+  let newWidth = width;
+  let newHeight = width / aspectRatio;
+
+  if (newHeight > height) {
+    newHeight = height;
+    newWidth = height * aspectRatio;
+  }
+
+  canvas.width = newWidth;
+  canvas.height = newHeight;
+}
+
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
+
 function spawnItem() {
   const isBomb = Math.random() < 0.3;
   items.push({

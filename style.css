@@ -4,11 +4,17 @@ body {
   font-family: monospace;
   text-align: center;
   padding: 20px;
+  margin: 0;
 }
 canvas {
-  border: 2px solid #333;
   background: #1e293b;
   touch-action: none;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #333;
+  display: block;
+  margin: 0 auto;
 }
 #score {
   font-size: 18px;
