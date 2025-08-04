@@ -96,15 +96,24 @@ canvas.addEventListener("click", (e) => {
 canvas.addEventListener("touchstart", (e) => {
   e.preventDefault();
   if (bgm.paused) bgm.play();
+
   const touch = e.touches[0];
   const rect = canvas.getBoundingClientRect();
+  const scaleX = canvas.width / rect.width;
+  const scaleY = canvas.height / rect.height;
+
+  const clickX = (touch.clientX - rect.left) * scaleX;
+  const clickY = (touch.clientY - rect.top) * scaleY;
+
   const event = new MouseEvent("click", {
-    clientX: touch.clientX,
-    clientY: touch.clientY,
+    clientX: rect.left + clickX,
+    clientY: rect.top + clickY,
     bubbles: true
   });
+
   canvas.dispatchEvent(event);
 }, { passive: false });
+
 
 document.getElementById("muteBtn").addEventListener("click", () => {
   bgm.muted = !bgm.muted;
