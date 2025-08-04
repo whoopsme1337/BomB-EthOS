@@ -94,12 +94,14 @@ canvas.addEventListener("click", (e) => {
 });
 
 canvas.addEventListener("touchstart", (e) => {
+  e.preventDefault();
   if (bgm.paused) bgm.play();
   const touch = e.touches[0];
   const rect = canvas.getBoundingClientRect();
   const event = new MouseEvent("click", {
     clientX: touch.clientX,
-    clientY: touch.clientY
+    clientY: touch.clientY,
+    bubbles: true
   });
   canvas.dispatchEvent(event);
 }, { passive: false });
