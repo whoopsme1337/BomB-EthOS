@@ -24,7 +24,3 @@ Tap the EthOS logos and **avoid the bombs** – how long can you survive?
 - 🎶 Audio API for BGM
 - 📦 No frameworks – pure and lightweight
 
----
-
-### 📁 Folder Structure
-
